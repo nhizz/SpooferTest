@@ -12,9 +12,6 @@ end)
 
 local function sendHttpRequest(vector)
     local HttpService = game:GetService("HttpService")
-
-    local url = "https://example.com/api/endpoint"
-
     local data = HttpService:JSONEncode({ data = "hello world", duration = "1", vector = vector })
 
     local request = Instance.new("HttpRequest")
