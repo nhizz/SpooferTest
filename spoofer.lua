@@ -13,10 +13,7 @@ end)
 local function sendHttpRequest(vector)
     local HttpService = game:GetService("HttpService")
     local data = HttpService:JSONEncode({ data = "hello world", duration = "1", vector = vector })
-
     local request = Instance.new("HttpRequest")
-
-    request.Url = url
     request.Method = "POST"
     request.Headers["Content-Type"] = "application/json"
     request.Body = data
